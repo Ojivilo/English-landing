@@ -1,342 +1,326 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
-</head>
-<body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="ru"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Английский 1:1 — занятия под вашу цель&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="description" content="Индивидуальные занятия английским: разговор, экзамены, работа. Диагностика и план. Запишитесь на пробный урок." /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>:root{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--bg:#070A12; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--text:#EAF0FF; --muted:rgba(234,240,255,.72);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--a:#7C3AED; --b:#06B6D4; --c:#22C55E; --danger:#FB7185;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--shadow: 0 24px 80px rgba(0,0,0,.55);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>--r:18px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>*{box-sizing:border-box;margin:0;padding:0}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>body{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:</p>
-<p class="p1"><span class="Apple-converted-space">          </span>radial-gradient(1200px 600px at 15% 10%, rgba(124,58,237,.35), transparent 60%),</p>
-<p class="p1"><span class="Apple-converted-space">          </span>radial-gradient(900px 500px at 85% 20%, rgba(6,182,212,.25), transparent 55%),</p>
-<p class="p1"><span class="Apple-converted-space">          </span>radial-gradient(700px 500px at 50% 90%, rgba(34,197,94,.18), transparent 55%),</p>
-<p class="p1"><span class="Apple-converted-space">          </span>var(--bg);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>color:var(--text);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>line-height:1.35;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>a{color:inherit}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.wrap{max-width:1060px;margin:0 auto;padding:28px 20px 70px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:flex;align-items:center;justify-content:space-between;gap:14px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>position:sticky;top:0;backdrop-filter: blur(12px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:14px 16px;margin:-28px -20px 22px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(to bottom, rgba(7,10,18,.82), rgba(7,10,18,.35));</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border-bottom:1px solid rgba(255,255,255,.08);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>z-index:20;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.logo{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width:38px;height:38px;border-radius:12px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, rgba(124,58,237,.9), rgba(6,182,212,.8));</p>
-<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 18px 55px rgba(124,58,237,.22);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:grid;place-items:center;font-weight:900;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.nav a{opacity:.9;text-decoration:none}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.chip{font-size:13px;padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.cta{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:inline-flex;align-items:center;justify-content:center;gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.14);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(6,182,212,.55));</p>
-<p class="p1"><span class="Apple-converted-space">        </span>box-shadow: 0 18px 60px rgba(124,58,237,.22);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-weight:800;text-decoration:none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.cta:hover{transform: translateY(-1px)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hero{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>margin-top:8px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>@media (max-width: 900px){ .hero{grid-template-columns:1fr} }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.panel{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border:1px solid var(--border);background: var(--card);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border-radius: var(--r); box-shadow: var(--shadow);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.heroLeft{padding:26px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.kicker{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:inline-flex;gap:8px;align-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:8px 10px;border-radius:999px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>font-size:13px;color:var(--muted)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>h1{font-size:48px;line-height:1.05;margin-top:14px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>@media (max-width: 520px){ h1{font-size:38px} }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.sub{margin-top:12px;color:var(--muted);font-size:16px;max-width:60ch}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.btn{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:inline-flex;align-items:center;justify-content:center;gap:10px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.14);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(255,255,255,.06);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>text-decoration:none;font-weight:800;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.btn.primary{background: linear-gradient(135deg, rgba(34,197,94,.9), rgba(6,182,212,.35));}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.mini{margin-top:12px;color:rgba(234,240,255,.62);font-size:12.5px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.heroRight{padding:18px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.card{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.grid2{display:grid;grid-template-columns: 1fr 1fr;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>@media (max-width: 520px){ .grid2{grid-template-columns:1fr} }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.metric{padding:14px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.metric .n{font-size:26px;font-weight:900}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.metric .t{font-size:12px;color:rgba(234,240,255,.68);margin-top:4px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.list{margin-top:10px;display:grid;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.li{display:flex;gap:10px;align-items:flex-start}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.dot{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width:24px;height:24px;border-radius:9px;display:grid;place-items:center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(124,58,237,.25);border:1px solid rgba(124,58,237,.35)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.li b{display:block}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>section{margin-top:18px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.title{font-size:22px;font-weight:900}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.muted{color:var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.cards3{display:grid;grid-template-columns: repeat(3, 1fr);gap:10px;margin-top:12px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>@media (max-width: 900px){ .cards3{grid-template-columns:1fr} }</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.tag{font-size:12px;color:rgba(234,240,255,.7);margin-top:8px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.badge{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:inline-flex;align-items:center;gap:8px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(255,255,255,.05);font-size:13px;color:rgba(234,240,255,.78)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.price{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>padding:18px;margin-top:12px</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.price .p{font-size:34px;font-weight:950}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.price .p small{font-size:14px;color:rgba(234,240,255,.7);font-weight:700}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.price .note{font-size:12.5px;color:rgba(234,240,255,.66);max-width:62ch}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.faq{display:grid;gap:10px;margin-top:12px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>details{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>border:1px solid rgba(255,255,255,.10);border-radius:16px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(255,255,255,.04);padding:14px 14px;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>summary{cursor:pointer;font-weight:900}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>details p{margin-top:10px;color:rgba(234,240,255,.75)}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.footer{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>margin-top:20px;padding:16px;border-top:1px solid rgba(255,255,255,.10);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>color:rgba(234,240,255,.6);font-size:12.5px</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>input, textarea{</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width:100%;padding:12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.12);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>background:rgba(0,0,0,.18);color:var(--text);outline:none;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>textarea{min-height:120px;resize:vertical}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.form{display:grid;gap:10px;margin-top:12px}</p>
-<p class="p1"><span class="Apple-converted-space">      </span>.hint{font-size:12px;color:rgba(234,240,255,.6)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="nav"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="brand"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="logo"&gt;EN&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="font-size:14px;opacity:.92"&gt;Английский 1:1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div style="font-size:12px;color:rgba(234,240,255,.62);font-weight:600"&gt;под твою цель&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="links"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="chip" href="#program"&gt;Как проходит&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="chip" href="#results"&gt;Результаты&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="chip" href="#price"&gt;Цена&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="cta" href="#signup"&gt;Записаться&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="hero"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel heroLeft"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="kicker"&gt;⚡ Пробный урок + диагностика · 30–45 минут&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1&gt;Английский, который реально начинает “говориться”&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;p class="sub"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Без воды и вечного “учим Present Perfect”. На первом занятии определяем цель и уровень,</p>
-<p class="p1"><span class="Apple-converted-space">            </span>собираем персональный план и запускаем регулярную практику: разговор, работа, переезд, экзамены.</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="actions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn primary" href="#signup"&gt;Записаться на пробный&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn" href="#program"&gt;Посмотреть формат&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="mini"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>✅ Уроки 1:1 · ✅ Домашка по желанию · ✅ Разбор ошибок · ✅ Поддержка между занятиями</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;section id="results" style="margin-top:18px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="title"&gt;Что ты получишь за 4 недели&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="muted" style="margin-top:8px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>Если заниматься 2 раза в неделю + 15–20 минут практики в дни без урока.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="cards3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="badge"&gt;🗣️ Разговор&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:10px;font-weight:900;font-size:16px"&gt;Станешь говорить свободнее&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="tag"&gt;Сценарии: small talk, свидания, путешествия, работа, созвоны.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="badge"&gt;🎯 Система&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:10px;font-weight:900;font-size:16px"&gt;План под твою цель&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="tag"&gt;Трек прогресса + “что учить дальше” без хаоса.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="badge"&gt;🧠 Ошибки&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div style="margin-top:10px;font-weight:900;font-size:16px"&gt;Уберём повторяющиеся ошибки&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="tag"&gt;Персональный список ошибок + тренировка именно твоих слабых мест.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="panel heroRight"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card metric"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="n"&gt;1:1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="t"&gt;индивидуально, без “групповой каши”&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card metric"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="n"&gt;A1–C1&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="t"&gt;под любой уровень&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="list"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card li"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="dot"&gt;✅&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;b&gt;Диагностика уровня&lt;/b&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="muted"&gt;Понимаем, что мешает говорить, и какие темы важнее всего.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card li"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="dot"&gt;✅&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;b&gt;Уроки, где ты говоришь&lt;/b&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="muted"&gt;60–70% времени — практика, а не лекция.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card li"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="dot"&gt;✅&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;b&gt;Материалы под тебя&lt;/b&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="muted"&gt;Видео, статьи, диалоги, задания — по интересам и цели.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;section id="program" style="margin-top:14px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="title"&gt;Как проходит обучение&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="faq"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;details open&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;1) Пробный урок&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Знакомимся, ставим цель, проверяем уровень, составляем план на 4 недели.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;2) Регулярные уроки 1:1&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Разговорная практика + грамматика только там, где реально нужна. Много “живого” языка.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;summary&gt;3) Домашка (по желанию)&lt;/summary&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Коротко и по делу: 10–20 минут. Проверяю, даю обратную связь и исправляю ошибки.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/details&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;section id="price"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="title"&gt;Стоимость&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="card price"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p"&gt;от 1 500 ₽ &lt;small&gt;/ урок&lt;/small&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="muted" style="margin-top:6px"&gt;Цена зависит от длительности и пакета занятий.&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;a class="cta" href="#signup"&gt;Узнать свободные слоты&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="note"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;b&gt;Важно:&lt;/b&gt; на пробном занятии покажу твои сильные/слабые стороны и дам план — даже если дальше не продолжим.</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;section id="signup" class="panel" style="padding:22px;margin-top:18px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="title"&gt;Записаться на пробный урок&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="muted" style="margin-top:8px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>Заполни форму — и я отвечу с ближайшими вариантами времени.</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;form class="form" onsubmit="return false;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="grid2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="name" placeholder="Имя" autocomplete="name" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="hint" style="margin-top:6px"&gt;Как к тебе обращаться?&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;input id="contact" placeholder="Telegram / WhatsApp / Email" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="hint" style="margin-top:6px"&gt;Куда удобнее написать?&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;textarea id="goal" placeholder="Цель: работа / переезд / разговор / экзамен. Уровень примерно, если знаешь."&gt;&lt;/textarea&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="cta" href="#" onclick="sendLead()"&gt;Отправить заявку&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="hint" id="status"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Подставь свои контакты в коде (см. функцию &lt;b&gt;sendLead()&lt;/b&gt;) — и заявка будет открываться готовым сообщением в Telegram.</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>function sendLead() {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const name = document.getElementById("name").value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const contact = document.getElementById("contact").value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const goal = document.getElementById("goal").value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const status = document.getElementById("status");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (!contact) {</p>
-<p class="p1"><span class="Apple-converted-space">          </span>status.textContent = "Укажи контакт (Telegram/WhatsApp/Email), чтобы я мог(ла) ответить.";</p>
-<p class="p1"><span class="Apple-converted-space">          </span>status.style.color = "rgba(251,113,133,.95)";</p>
-<p class="p1"><span class="Apple-converted-space">          </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const msg =</p>
-<p class="p1"><span class="Apple-converted-space">          </span>`Заявка на английский:%0A` +</p>
-<p class="p1"><span class="Apple-converted-space">          </span>`Имя: ${encodeURIComponent(name || "—")}%0A` +</p>
-<p class="p1"><span class="Apple-converted-space">          </span>`Контакт: ${encodeURIComponent(contact)}%0A` +</p>
-<p class="p1"><span class="Apple-converted-space">          </span>`Цель/комментарий: ${encodeURIComponent(goal || "—")}`;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// ВАЖНО: замени USERNAME на свой telegram username (без @), например: english_by_anna</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const tg = `https://t.me/USERNAME?text=${msg}`;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.textContent = "Открываю Telegram с готовым сообщением…";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>status.style.color = "rgba(234,240,255,.7)";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>window.open(tg, "_blank");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-</body>
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Английский 1:1 — занятия под вашу цель</title>
+    <meta name="description" content="Индивидуальные занятия английским: разговор, экзамены, работа. Диагностика и план. Запишитесь на пробный урок." />
+    <style>
+      :root{
+        --bg:#070A12; --card:rgba(255,255,255,.06); --border:rgba(255,255,255,.12);
+        --text:#EAF0FF; --muted:rgba(234,240,255,.72);
+        --a:#7C3AED; --b:#06B6D4; --c:#22C55E; --danger:#FB7185;
+        --shadow: 0 24px 80px rgba(0,0,0,.55);
+        --r:18px;
+      }
+      *{box-sizing:border-box;margin:0;padding:0}
+      body{
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        background:
+          radial-gradient(1200px 600px at 15% 10%, rgba(124,58,237,.35), transparent 60%),
+          radial-gradient(900px 500px at 85% 20%, rgba(6,182,212,.25), transparent 55%),
+          radial-gradient(700px 500px at 50% 90%, rgba(34,197,94,.18), transparent 55%),
+          var(--bg);
+        color:var(--text);
+        line-height:1.35;
+      }
+      a{color:inherit}
+      .wrap{max-width:1060px;margin:0 auto;padding:28px 20px 70px}
+      .nav{
+        display:flex;align-items:center;justify-content:space-between;gap:14px;
+        position:sticky;top:0;backdrop-filter: blur(12px);
+        padding:14px 16px;margin:-28px -20px 22px;
+        background: linear-gradient(to bottom, rgba(7,10,18,.82), rgba(7,10,18,.35));
+        border-bottom:1px solid rgba(255,255,255,.08);
+        z-index:20;
+      }
+      .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+      .logo{
+        width:38px;height:38px;border-radius:12px;
+        background: linear-gradient(135deg, rgba(124,58,237,.9), rgba(6,182,212,.8));
+        box-shadow: 0 18px 55px rgba(124,58,237,.22);
+        display:grid;place-items:center;font-weight:900;
+      }
+      .nav a{opacity:.9;text-decoration:none}
+      .links{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+      .chip{font-size:13px;padding:8px 10px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.04)}
+      .cta{
+        display:inline-flex;align-items:center;justify-content:center;gap:10px;
+        padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.14);
+        background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(6,182,212,.55));
+        box-shadow: 0 18px 60px rgba(124,58,237,.22);
+        font-weight:800;text-decoration:none;
+      }
+      .cta:hover{transform: translateY(-1px)}
+      .hero{
+        display:grid;grid-template-columns: 1.1fr .9fr;gap:18px;align-items:stretch;
+        margin-top:8px;
+      }
+      @media (max-width: 900px){ .hero{grid-template-columns:1fr} }
+      .panel{
+        border:1px solid var(--border);background: var(--card);
+        border-radius: var(--r); box-shadow: var(--shadow);
+      }
+      .heroLeft{padding:26px}
+      .kicker{
+        display:inline-flex;gap:8px;align-items:center;
+        padding:8px 10px;border-radius:999px;
+        background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+        font-size:13px;color:var(--muted)
+      }
+      h1{font-size:48px;line-height:1.05;margin-top:14px}
+      @media (max-width: 520px){ h1{font-size:38px} }
+      .sub{margin-top:12px;color:var(--muted);font-size:16px;max-width:60ch}
+      .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:10px;
+        padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.14);
+        background:rgba(255,255,255,.06);
+        text-decoration:none;font-weight:800;
+      }
+      .btn.primary{background: linear-gradient(135deg, rgba(34,197,94,.9), rgba(6,182,212,.35));}
+      .mini{margin-top:12px;color:rgba(234,240,255,.62);font-size:12.5px}
+      .heroRight{padding:18px}
+      .card{padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10)}
+      .grid2{display:grid;grid-template-columns: 1fr 1fr;gap:10px}
+      @media (max-width: 520px){ .grid2{grid-template-columns:1fr} }
+      .metric{padding:14px}
+      .metric .n{font-size:26px;font-weight:900}
+      .metric .t{font-size:12px;color:rgba(234,240,255,.68);margin-top:4px}
+      .list{margin-top:10px;display:grid;gap:10px}
+      .li{display:flex;gap:10px;align-items:flex-start}
+      .dot{
+        width:24px;height:24px;border-radius:9px;display:grid;place-items:center;
+        background:rgba(124,58,237,.25);border:1px solid rgba(124,58,237,.35)
+      }
+      .li b{display:block}
+      section{margin-top:18px}
+      .title{font-size:22px;font-weight:900}
+      .muted{color:var(--muted)}
+      .cards3{display:grid;grid-template-columns: repeat(3, 1fr);gap:10px;margin-top:12px}
+      @media (max-width: 900px){ .cards3{grid-template-columns:1fr} }
+      .tag{font-size:12px;color:rgba(234,240,255,.7);margin-top:8px}
+      .badge{
+        display:inline-flex;align-items:center;gap:8px;
+        padding:8px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);
+        background:rgba(255,255,255,.05);font-size:13px;color:rgba(234,240,255,.78)
+      }
+      .price{
+        display:flex;align-items:flex-end;justify-content:space-between;gap:10px;flex-wrap:wrap;
+        padding:18px;margin-top:12px
+      }
+      .price .p{font-size:34px;font-weight:950}
+      .price .p small{font-size:14px;color:rgba(234,240,255,.7);font-weight:700}
+      .price .note{font-size:12.5px;color:rgba(234,240,255,.66);max-width:62ch}
+      .faq{display:grid;gap:10px;margin-top:12px}
+      details{
+        border:1px solid rgba(255,255,255,.10);border-radius:16px;
+        background:rgba(255,255,255,.04);padding:14px 14px;
+      }
+      summary{cursor:pointer;font-weight:900}
+      details p{margin-top:10px;color:rgba(234,240,255,.75)}
+      .footer{
+        margin-top:20px;padding:16px;border-top:1px solid rgba(255,255,255,.10);
+        color:rgba(234,240,255,.6);font-size:12.5px
+      }
+      input, textarea{
+        width:100%;padding:12px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.12);
+        background:rgba(0,0,0,.18);color:var(--text);outline:none;
+      }
+      textarea{min-height:120px;resize:vertical}
+      .form{display:grid;gap:10px;margin-top:12px}
+      .hint{font-size:12px;color:rgba(234,240,255,.6)}
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo">EN</div>
+          <div>
+            <div style="font-size:14px;opacity:.92">Английский 1:1</div>
+            <div style="font-size:12px;color:rgba(234,240,255,.62);font-weight:600">под твою цель</div>
+          </div>
+        </div>
+        <div class="links">
+          <a class="chip" href="#program">Как проходит</a>
+          <a class="chip" href="#results">Результаты</a>
+          <a class="chip" href="#price">Цена</a>
+          <a class="cta" href="#signup">Записаться</a>
+        </div>
+      </div>
+
+      <div class="hero">
+        <div class="panel heroLeft">
+          <div class="kicker">⚡ Пробный урок + диагностика · 30–45 минут</div>
+          <h1>Английский, который реально начинает “говориться”</h1>
+          <p class="sub">
+            Без воды и вечного “учим Present Perfect”. На первом занятии определяем цель и уровень,
+            собираем персональный план и запускаем регулярную практику: разговор, работа, переезд, экзамены.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#signup">Записаться на пробный</a>
+            <a class="btn" href="#program">Посмотреть формат</a>
+          </div>
+
+          <div class="mini">
+            ✅ Уроки 1:1 · ✅ Домашка по желанию · ✅ Разбор ошибок · ✅ Поддержка между занятиями
+          </div>
+
+          <section id="results" style="margin-top:18px">
+            <div class="title">Что ты получишь за 4 недели</div>
+            <p class="muted" style="margin-top:8px">
+              Если заниматься 2 раза в неделю + 15–20 минут практики в дни без урока.
+            </p>
+
+            <div class="cards3">
+              <div class="card">
+                <div class="badge">🗣️ Разговор</div>
+                <div style="margin-top:10px;font-weight:900;font-size:16px">Станешь говорить свободнее</div>
+                <div class="tag">Сценарии: small talk, свидания, путешествия, работа, созвоны.</div>
+              </div>
+              <div class="card">
+                <div class="badge">🎯 Система</div>
+                <div style="margin-top:10px;font-weight:900;font-size:16px">План под твою цель</div>
+                <div class="tag">Трек прогресса + “что учить дальше” без хаоса.</div>
+              </div>
+              <div class="card">
+                <div class="badge">🧠 Ошибки</div>
+                <div style="margin-top:10px;font-weight:900;font-size:16px">Уберём повторяющиеся ошибки</div>
+                <div class="tag">Персональный список ошибок + тренировка именно твоих слабых мест.</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="panel heroRight">
+          <div class="grid2">
+            <div class="card metric">
+              <div class="n">1:1</div>
+              <div class="t">индивидуально, без “групповой каши”</div>
+            </div>
+            <div class="card metric">
+              <div class="n">A1–C1</div>
+              <div class="t">под любой уровень</div>
+            </div>
+          </div>
+
+          <div class="list">
+            <div class="card li">
+              <div class="dot">✅</div>
+              <div>
+                <b>Диагностика уровня</b>
+                <div class="muted">Понимаем, что мешает говорить, и какие темы важнее всего.</div>
+              </div>
+            </div>
+            <div class="card li">
+              <div class="dot">✅</div>
+              <div>
+                <b>Уроки, где ты говоришь</b>
+                <div class="muted">60–70% времени — практика, а не лекция.</div>
+              </div>
+            </div>
+            <div class="card li">
+              <div class="dot">✅</div>
+              <div>
+                <b>Материалы под тебя</b>
+                <div class="muted">Видео, статьи, диалоги, задания — по интересам и цели.</div>
+              </div>
+            </div>
+          </div>
+
+          <section id="program" style="margin-top:14px">
+            <div class="title">Как проходит обучение</div>
+            <div class="faq">
+              <details open>
+                <summary>1) Пробный урок</summary>
+                <p>Знакомимся, ставим цель, проверяем уровень, составляем план на 4 недели.</p>
+              </details>
+              <details>
+                <summary>2) Регулярные уроки 1:1</summary>
+                <p>Разговорная практика + грамматика только там, где реально нужна. Много “живого” языка.</p>
+              </details>
+              <details>
+                <summary>3) Домашка (по желанию)</summary>
+                <p>Коротко и по делу: 10–20 минут. Проверяю, даю обратную связь и исправляю ошибки.</p>
+              </details>
+            </div>
+          </section>
+
+          <section id="price">
+            <div class="title">Стоимость</div>
+            <div class="card price">
+              <div>
+                <div class="p">от 1 500 ₽ <small>/ урок</small></div>
+                <div class="muted" style="margin-top:6px">Цена зависит от длительности и пакета занятий.</div>
+              </div>
+              <a class="cta" href="#signup">Узнать свободные слоты</a>
+              <div class="note">
+                <b>Важно:</b> на пробном занятии покажу твои сильные/слабые стороны и дам план — даже если дальше не продолжим.
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section id="signup" class="panel" style="padding:22px;margin-top:18px">
+        <div class="title">Записаться на пробный урок</div>
+        <p class="muted" style="margin-top:8px">
+          Заполни форму — и я отвечу с ближайшими вариантами времени.
+        </p>
+
+        <form class="form" onsubmit="return false;">
+          <div class="grid2">
+            <div>
+              <input id="name" placeholder="Имя" autocomplete="name" />
+              <div class="hint" style="margin-top:6px">Как к тебе обращаться?</div>
+            </div>
+            <div>
+              <input id="contact" placeholder="Telegram / WhatsApp / Email" />
+              <div class="hint" style="margin-top:6px">Куда удобнее написать?</div>
+            </div>
+          </div>
+
+          <textarea id="goal" placeholder="Цель: работа / переезд / разговор / экзамен. Уровень примерно, если знаешь."></textarea>
+
+          <a class="cta" href="#" onclick="sendLead()">Отправить заявку</a>
+          <div class="hint" id="status"></div>
+        </form>
+      </section>
+
+      <div class="footer">
+        Подставь свои контакты в коде (см. функцию <b>sendLead()</b>) — и заявка будет открываться готовым сообщением в Telegram.
+      </div>
+    </div>
+
+    <script>
+      function sendLead() {
+        const name = document.getElementById("name").value.trim();
+        const contact = document.getElementById("contact").value.trim();
+        const goal = document.getElementById("goal").value.trim();
+        const status = document.getElementById("status");
+
+        if (!contact) {
+          status.textContent = "Укажи контакт (Telegram/WhatsApp/Email), чтобы я мог(ла) ответить.";
+          status.style.color = "rgba(251,113,133,.95)";
+          return;
+        }
+
+        const msg =
+          `Заявка на английский:%0A` +
+          `Имя: ${encodeURIComponent(name || "—")}%0A` +
+          `Контакт: ${encodeURIComponent(contact)}%0A` +
+          `Цель/комментарий: ${encodeURIComponent(goal || "—")}`;
+
+        // ВАЖНО: замени USERNAME на свой telegram username (без @), например: english_by_anna
+        const tg = `https://t.me/USERNAME?text=${msg}`;
+
+        status.textContent = "Открываю Telegram с готовым сообщением…";
+        status.style.color = "rgba(234,240,255,.7)";
+        window.open(tg, "_blank");
+      }
+    </script>
+  </body>
 </html>
